@@ -14,7 +14,7 @@ import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 function Header() {
-    return <div classname="header"> 
+    return <div className="header"> 
 
 
             <div className="header__left">
@@ -28,7 +28,7 @@ function Header() {
             </div>
 
 
-            <div className="header__middle">
+            <div className="header__center">
                 <div className='header__option'>
                     <HomeIcon fontsize="large"/>
                 </div>
