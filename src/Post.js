@@ -4,18 +4,20 @@ import { Avatar } from '@material-ui/core';
 import ThumbIcon from '@material-ui/icons/ThumbUp';
 import ChatBubbleOutLineIcon from '@material-ui/icons/ChatBubbleOutline';
 import NearMeIcon from "@material-ui/icons/NearMe";
-import { ExpandedOuline, ExpandMoreOutlined } from '@material-ui/icons';
+import {  ExpandMoreOutlined } from '@material-ui/icons';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+//import firebase from './firebase'
 
 
-function Post({profilePic, image, username, timestamp, message}) {
+
+function Post({ profilePic, image, username, timestamp, message }) {
     return (
         <div className= 'post'>
             <div className='post__top'>
                 <Avatar src={profilePic} className="post__avatar" />
                 <div className='post__topInfo'>
                     <h3>{username}</h3>
-                    <p>Timestamp...</p>
+                    <p>{new Date(timestamp?.toDate()).toUTCString()}</p>
                 </div>
 
             </div>

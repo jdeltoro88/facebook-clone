@@ -8,11 +8,13 @@ import  {ExpandMoreOutlined}  from '@material-ui/icons'
 import  React from 'react';
 import './Sidebar.css';
 import SidebarRow from "./SidebarRow";
+import { useStateValue } from "./StateProvider";
 
 function Sidebar() {
+    const [{user}, dispatch] = useStateValue();
     return (
         <div className= 'sidebar'>
-        <SidebarRow src="https://avatars.githubusercontent.com/u/61124054?v=4" title='jon toro'/>
+        <SidebarRow src= {user.photoUrl} title={user.displayName}/>
         <SidebarRow Icon= {LocalHospitalIcon} title='COVID-19 Information Center' />
         <SidebarRow Icon= {EmojiFlagsIcon} title='Pages'/>
         <SidebarRow Icon= {PeopleIcon} title='Friends'/>
